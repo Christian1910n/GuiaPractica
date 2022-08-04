@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">app3SitiosTuristicos</string>
+    <string name="txt_informacion">INFORMATION</string>
+    <string name="txt_nombre">Name</string>
+    <string name="txt_ubicacion">Location</string>
+    <string name="txt_detalle">Tourist Site Detail</string>
+    <string name="txt_valoracion">RATING</string>
+    <string name="btn_guardar">SAVE</string>
+    <string name="txt_nombresitio">SITE NAME</string>
+    <string name="txt_mubicacion">Show Location</string>
+    <string name="txt_minformacion">Show Information</string>
+</resources>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="sitioturistico"
+            type="com.example.app3sitiosturisticos.Sitioturistico" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ActivityDetalle">
+
+        <TextView
+            android:id="@+id/txt_informacion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="8dp"
+            android:text="@string/txt_informacion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_ubicacion" />
+
+        <TextView
+            android:id="@+id/txt_ubicacion2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_minformacion"
+            android:padding="8dp"
+            android:text="@{sitioturistico.informacion}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_informacion" />
+
+        <ImageView
+            android:id="@+id/img_sitio"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/txt_nombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_nombresitio"
+            android:padding="16dp"
+            android:text="@{sitioturistico.nombre}"
+            android:textAlignment="center"
+            android:textColor="@color/azul"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_sitio" />
+
+        <TextView
+            android:id="@+id/txt_titUbicacion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:padding="8dp"
+            android:text="@string/txt_ubicacion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_nombre" />
+
+        <TextView
+            android:id="@+id/txt_ubicacion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/txt_mubicacion"
+            android:padding="8dp"
+            android:text="@{sitioturistico.ubicacion}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_titUbicacion" />
+
+        <TextView
+            android:id="@+id/txt_valoracion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/txt_valoracion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_ubicacion2" />
+
+        <RatingBar
+            android:id="@+id/rtb_valoracion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:isIndicator="true"
+            android:progressTint="#FFEB3B"
+            android:rating="@{sitioturistico.valoracion}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_valoracion" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
